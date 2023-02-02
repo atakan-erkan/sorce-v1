@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.col-2 {
+  border-left: 1px solid #f3f3f3;
+  border-right: 1px solid #f3f3f3;
+}
+.col-8 {
+  border-left: 1px solid #f3f3f3;
+  border-right: 1px solid #f3f3f3;
+}
+body {
+  background-color: rgb(21, 32, 43);
+  color: rgb(255, 255, 255);
+}
+a {
+  color: rgb(255, 255, 255);
+  padding: 5px;
+}
+.hak {
+  padding: 20px;
+  height: 30px;
+  margin-top: 15px;
+}
+.main-content {
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-content form {
+  width: 100%;
+}
+.main-content form input,
+textarea {
+  width: 100%;
+  margin: 1rem 0;
+  background-color: transparent;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  transition: all 0.4sn ease;
+  border-radius: 18px;
+}
+button.button1 {
+  width: 125px;
+  background-color: rgb(29, 155, 240);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 1px solid #ffffff;
+  border-radius: 24px;
+  color: #ffffff;
+  transition: all 0.4sn ease;
+}
+.main-content form:hover {
+  color: #ffffff;
+}
+.main-content form input:hover,
+textarea:hover {
+  color: #fff;
+}
+.main-content form input:focus,
+textarea:focus {
+  color: #fff;
+  border-color: #37c860;
+}
+.main-header {
+  font-size: 20px;
+  padding: 8px 16px;
+}
+.main-nav {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-nav__item {
+  padding: 10px;
+  margin-left: 30px;
+  line-height: 50px;
+}
+.main-logo {
+  margin: 50px 40px;
+}
+.main-header__logo {
+  color: #f3f3f3;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: sans-serif;
+  margin: auto 20px;
+  margin-top: 10px;
+}
+.main-nav__item a {
+  color: #37c860;
+  box-sizing: border-box;
+  padding: 5px 8px;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  border-radius: 24px;
+}
+.main-nav__item:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(66, 194, 255, 0.1);
+
+  border-radius: 24px;
+}
+.main-header__logo:hover {
+  color: #fff;
+  border-radius: 24px;
+  background-color: rgb(66, 194, 255, 0.1);
+  transition: 0.5sn;
+}
+.giris-yap #ata{
+ display: none;
+}
+.kayit-ol #ata{
+  display: none;
+ }
+ .i-index .çıkış-yap {
+   display:none;
+ }
+ .i-index .gizle {
+   display:none;
+ }
+ .sozlesme #ata {
+   display: none;
+ }
+.sag {
+  margin-top: 20px;
+  text-align: center;
+  margin-right: 40px;
+}
+.send {
+  display: inline-block;
+  margin-left: 640px;
+}
+.camera {
+  display: inline-block;
+  padding: 5px;
+  margin-left: 5px;
+}
+.camera input {
+  display: none;
+}
+.search-btn {
+  background: none;
+  border: none;
+  color: #eee;
+  font-size: 20px;
+}
+.fa {
+  cursor: pointer;
+}
+#search input[type="text"] {
+  border: 0;
+  background: none;
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 180px;
+  outline: none;
+  color: #fff;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+#search {
+  display: inline-block;
+}
+#search input[type="text"]:focus {
+  border-color: #37c860;
+}
+.fa-camera {
+  font-size: 24px;
+}
+.fa-image {
+  font-size: 24px;
+}
+.fa-file-pdf {
+  font-size: 24px;
+}
+.fa-magnifying-glass {
+  display: initial;
+  align-items: center;
+  font-size: 20px;
+}
+h2 span a {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+h2 span a:hover {
+  color: white;
+}
+.kapak-foto {
+  background-size: cover;
+  background-position: center;
+}
+.kapak-foto2 {
+  background-size: cover;
+  background-position: center;
+}
+
+.profil-foto {
+  width: 150px;
+  border-radius: 50%;
+  padding: 5px;
+  float: left;
+  
+}
+.profil-foto2 {
+  width: 10%;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.profil-foto3 {
+  width: 150px;
+  border-radius: 50%;
+  padding: 5px;
+  float: left;
+  position: absolute;
+  right: 72.5%;
+  top: 40%;
+}
+.profil-bilgi {
+  padding: 5px;
+  margin-left: 150px;
+}
+.temalar {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  height: 100px;
+}
+.temalar:hover {
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.temalar .tema-adı {
+  text-align: center;
+  font-size: 25px;
+}
+.temelar li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+.tema-btn {
+  margin: 5px;
+  width: 220px;
+  height: 40px;
+  outline: none;
+  border: 2px solid #ffffff;
+  border-radius: 16px;
+  color: black;
+  transition: all 0.4sn ease;
+  background-color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-color: #3498db;
+}
+.beyaz-mode {
+  background-color: white;
+  color: black;
+}
+.beyaz-mode input[type="text"]{
+  border: 2px solid black;
+  color: black;
+}
+.beyaz-mode textarea {
+  border: 2px solid black;
+  color: black;
+}
+.beyaz-mode textarea:focus {
+  border-color: #37c860;
+}
+.beyaz-mode a {
+  color: #090909;
+}
+.beyaz-mode button {
+  border: 2px solid black;
+}
+.beyaz-mode fa {
+  color: #090909;
+}
+.beyaz-mode form:hover {
+  color: #090909;
+}
+.siyah-mode {
+  background-color: black;
+  color: white;
+}
+.gri-mode {
+  background-color: #2f4f4f;
+  color: white;
+}
+.sarı-mode {
+  background-color: #f0b323;
+  color: #090909;
+}
+.sarı-mode button {
+  background-color: #090909;
+  color: #f0b323;
+  border: 2px solid #090909;
+}
+.sarı-mode a {
+  color: #090909;
+  font-family: "futura-pt-bold", -apple-system, BlinkMacSystemFont,
+    San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+  font-weight: 700;
+}
+.sarı-mode input[type="checkbox"]:checked {
+  background-color: #090909;
+}
+.sarı-mode textarea {
+  border: 2px solid #090909;
+}
+.sarı-mode ul li {
+  color: #090909;
+}
+.doga-mode {
+  background: url(images/duz-mavi.jpg);
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.doga2-mode {
+  background: url(images/doga.jpg);
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.deniz-mode {
+  background: url(images/deniz.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  }

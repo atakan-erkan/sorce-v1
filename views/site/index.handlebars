@@ -1,0 +1,73 @@
+<div class="col-8">
+  <h2 class="sayfa-yeri">
+    <span>
+      <a href="/index">Anasayfa</a>
+    </span>
+  </h2>
+  <hr />
+  <div class="main-content">
+    <form action="/posts/sorcele" method="POST" enctype="multipart/form-data">
+      <input name="title" type="text" placeholder="Konu Başlığı">
+      <textarea
+        name="content"
+        id="message"
+        rows="10"
+        placeholder="Sorun nedir?"
+      ></textarea>
+      <div class="send">
+        <div class="camera">
+          <label for="file-input">
+            <i class="fa fa-camera"></i>
+          </label>
+          <input id="file-input" type="file" name="post_image" />
+        </div>
+        <div class="camera">
+          <label for="file-input">
+            <i class="fa fa-image icon"></i>
+          </label>
+          <input id="file-input" name="post_image" type="file" />
+        </div>
+        <div class="camera">
+          <label for="file-input">
+            <i class="fa fa-file-pdf"></i>
+          </label>
+          <input id="file-input" type="file" name="post_image" />
+        </div>
+        <button class="button1" type="submit">Sorcele</button>
+      </div>
+    </form>
+  </div>
+  <hr />
+  <section id="blog" class="md-padding">
+		<div class="container">
+			<div class="row">
+				<main id="main" class="col-md-16">
+          {{#if sessionFlash.message}}
+          <div class="{{sessionFlash.type}}">
+            {{sessionFlash.message}}
+          </div>
+          {{/if}}
+					<div class="row">
+            {{#each posts}}
+						<div class="col-md-14">
+							<div class="blog">
+								<div class="blog-content">
+                  <ul style="display:inline-block ;">
+                  <li style="display:inline ;"><img class="profil-foto2" src="images/{{author.foto}}" alt=""></li>
+                  <li style="display:inline ; font-size:18px; font-weight:500;"><span class="writer"><u>{{author.name}} {{author.surname}}</u> (@{{author.username}})</span></li>
+                  </ul>
+									<h4>{{title}}</h4>
+                  <p>{{content}}</p>
+                  <img src="{{post_image}}" alt="" style=" height: 500px; background-size: cover; background-position: center;">
+                  <br><br>
+									<ul class="blog-meta" style="list-style:none;">
+										<li style="display:none;"><i class="fas fa-user"></i><span class="writer">-Atakan Erkan</span></li>
+										<li style="display:inline; float:right"><i class="fas fa-clock"></i><span class="writer">{{generateDate date 'MMM DD YYYY'}}</span></li>
+									</ul>
+                  <hr>
+								</div>
+							</div>
+						</div>
+            {{/each}}
+  </section>
+</div>

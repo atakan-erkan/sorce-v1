@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giris Yap</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/sorce.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .giris { width: 300px; padding: 40px; position: absolute; top: 50%; left:
+      50%; transform: translate(-50%, -50%);
+      text-align: center; } 
+      .giris h1 { color: #fff; text-transform: uppercase;
+      font-weight: 500px; } 
+      .giris input[type="email"], 
+      .giris
+      input[type="password"] { border: 0; background: none; display: block;
+      margin: 20px auto; text-align: center; border: 2px solid #3498db; padding:
+      14px 10px; width: 200px; outline: none; color: #fff; border-radius: 24px;
+      transition: 0.25s; } 
+      .giris input[type="email"]:focus, .giris
+      input[type="password"]:focus { width: 280px; border-color: #2ecc71; }
+      .giris input[type="submit"] { border: 0; background: none; display: block;
+      margin: 20px auto; text-align: center; border: 2px solid #2ecc71; padding:
+      14px 40px; outline: none; color: #fff; border-radius: 24px; transition:
+      0.25s; cursor: pointer; } .giris input[type="submit"]:hover { background:
+      #2ecc71; } .main_logo { margin: 10px; }
+    </style>
+  </head>
+  <body class="giris-yap">
+    <header class="main-header">
+      <div class="main_logo">
+        <i class="fa fa-feather fa-2xl"></i>
+      </div>
+      <a href="/" class="main-header__logo">SorCe</a>
+      {{#if sessionFlash.message}}
+          <div class="{{sessionFlash.type}}" style="text-align:center ;">
+            {{sessionFlash.message}}
+          </div>
+          {{/if}}
+      <nav class="main-nav">
+        <ul class="main-nav__items">
+          <li class="main-nav__item">
+                <i class="fa fa-house"></i>
+                <a href="/">Anasayfa</a>
+              </li>
+              <li class="main-nav__item">
+            <i class="fa fa-right-to-bracket"></i>
+            <a href="/users/kayit-ol">Kayıt Ol</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <form id="girisID" class="giris" action="/users/giris-yap" method="post">
+      <h1>Giriş Yap</h1>
+      <div style="display: inline-flex">
+        <input  type="email" name="email" placeholder="Eposta giriniz" required />
+        <i class="fa-solid fa-at"></i>
+      </div>
+      <div style="display: inline-flex">
+        <input  type="password" name="password" placeholder="Parola giriniz" required />
+        <i class="fa-solid fa-key"></i>
+      </div>
+      <input id="girisButton" type="submit" name="" value="Giriş" />
+    </form>
+  </body>
+</html>
