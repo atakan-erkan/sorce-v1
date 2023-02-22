@@ -1,71 +1,56 @@
+<div class="col-8">
+  <h2>
+    <span>
+      <a href="/profil">Profil</a>
+    </span>
+  </h2>
+  <hr>
+  {{#each posts}}
+  <div class="profil-photos">
+    <img class="kapak-foto" src="images/{{author.kapak_foto}}" alt="" width="100%" height="500vh">
 
-      <div class="col-8">
-        <h2>
-          <span>
-          <a href="/profil">Profil</a>
-          </span>
-        </h2>
-        <hr>
-        {{#each posts}}
-        <div class="profil-photos">
-        <img class="kapak-foto" src="images/{{author.kapak_foto}}" alt="" width="100%" height="500vh">
-        
-        <img class="profil-foto" src="images/{{author.foto}}" alt="">
-        
-        <form action="/posts/test" method="post" enctype="multipart/form-data">
-        <ul style="list-style:none">
-          <li style="display:inline; float:right"><div class="camera">
-          <label for="file-input">
-            <i class="fa fa-image icon"></i>
-          </label>
-          <input id="file-input" name="post_image2" type="file" />
-        </div>Kapak Resmi</li>
-        <li style="display:inline; float:right"><div class="camera">
-          <label for="file-input">
-            <i class="fa fa-image icon"></i>
-          </label>
-          <input id="file-input" name="post_image3" type="file" />
-        </div>Profil Resmi</li>
-        </ul>
-        </form>
-        
-        <div class="profil-bilgi">
-        <h2>{{author.name}} {{author.surname}}</h2>
-        <p>@({{author.username}})</p>
-        <p>{{author.school}}</p>
-        <p>{{author.schoolname}}</p>
-        </div>
-        </div>
-        <hr>
- <section id="blog" class="md-padding">
-		<div class="container">
-			<div class="row">
-				<main id="main" class="col-md-16">
+    <img class="profil-foto" src="images/{{author.foto}}" alt="">
+
+    <div class="profil-bilgi">
+      <h2>{{author.name}} {{author.surname}}</h2>
+      <p>@{{author.username}}</p>
+      <p>{{author.school}}</p>
+      <p>{{author.schoolname}}</p>
+    </div>
+  </div>
+  <hr>
+  <section id="blog" class="md-padding">
+    <div class="container">
+      <div class="row">
+        <main id="main" class="col-md-16">
           {{#if sessionFlash.message}}
           <div class="{{sessionFlash.type}}">
             {{sessionFlash.message}}
           </div>
           {{/if}}
-					<div class="row">
-						<div class="col-md-14">
-							<div class="blog">
-								<div class="blog-content">
+          <div class="row">
+            <div class="col-md-14">
+              <div class="blog">
+                <div class="blog-content">
                   <ul style="display:inline-block ;">
-                  <li style="display:inline ;"><img class="profil-foto2" src="images/pp-resim.jpg" alt=""></li>
-                  <li style="display:inline ; font-size:18px; font-weight:500;"><span class="writer"><u>{{author.name}} {{author.surname}}</u> (@{{author.username}})</span></li>
+                    <li style="display:inline ;"><img class="profil-foto2" src="images/pp-resim.jpg" alt=""></li>
+                    <li style="display:inline ; font-size:18px; font-weight:500;"><span
+                        class="writer"><u>{{author.name}} {{author.surname}}</u> (@{{author.username}})</span></li>
                   </ul>
-									<h4>{{title}}</h4>
+                  <h4>{{title}}</h4>
                   <p>{{content}}</p>
-                  <img src="{{post_image}}" alt="" style=" height: 500px; background-size: cover; background-position: center;">
+                  <img src="{{post_image}}" alt=""
+                    style=" height: 500px; background-size: cover; background-position: center;">
                   <br><br>
-									<ul class="blog-meta" style="list-style:none;">
-										<li style="display:none;"><i class="fas fa-user"></i><span class="writer">-Atakan Erkan</span></li>
-										<li style="display:inline; float:right"><i class="fas fa-clock"></i><span class="writer">{{generateDate date 'MMM DD YYYY'}}</span></li>
-									</ul>
+                  <ul class="blog-meta" style="list-style:none;">
+                    <li style="display:none;"><i class="fas fa-user"></i><span class="writer">-Atakan Erkan</span></li>
+                    <li style="display:inline; float:right"><i class="fas fa-clock"></i><span
+                        class="writer">{{generateDate date 'MMM DD YYYY'}}</span></li>
+                  </ul>
                   <hr>
-								</div>
-							</div>
-						</div>
+                </div>
+              </div>
+            </div>
             {{/each}}
   </section>
 </div>
